@@ -109,7 +109,7 @@ export class NodeView extends Emitter<EventsTypes> {
     update() {
         const [x, y] = this.node.position;
 
-        this.el.style.transform = `translate(${x}px, ${y}px)`;
+        this.el.style.transform = `translate3D(${x}px, ${y}px, 0)`;
     }
 
     remove() {

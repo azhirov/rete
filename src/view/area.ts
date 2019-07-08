@@ -39,7 +39,7 @@ export class Area extends Emitter<EventsTypes> {
     update() {
         const t = this.transform;
 
-        this.el.style.transform = `translate(${t.x}px, ${t.y}px) scale(${t.k})`;
+        this.el.style.transform = `translate3D(${t.x}px, ${t.y}px, 0) scale(${t.k})`;
     }
 
     pointermove(e: PointerEvent) {
