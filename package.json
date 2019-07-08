@@ -11,7 +11,7 @@
     "prepublishOnly": "npm run lint && npm run build",
     "prebuild": "npm run lint & npm test && npm run types",
     "lint": "tsc && eslint --ext .ts --ext .js src",
-    "test": "BABEL_ENV=test mocha -r ts-node/register test/**.ts",
+    "test": "cross-env BABEL_ENV=test mocha -r ts-node/register test/**.ts",
     "coverage": "nyc npm run test",
     "types": "tsc src/index.ts --declaration --outDir ./types --downlevelIteration --emitDeclarationOnly"
   },
@@ -38,6 +38,7 @@
     "@typescript-eslint/eslint-plugin": "^1.6.0",
     "@typescript-eslint/parser": "^1.6.0",
     "babel-eslint": "^10.0.1",
+    "cross-env": "^5.2.0",
     "eslint": "^5.12.1",
     "jsdom": "^13.2.0",
     "jsdom-global": "^3.0.2",
